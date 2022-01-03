@@ -13,11 +13,11 @@ print(driver.title)
 user = driver.find_element_by_id("user_email")
 passwd = driver.find_element_by_id("user_password")
 # username = input("\n\n\n\nenter baliaadu account, format: name.UniqueId: ")
-username = "karan.e0119039"
+username = input("enter the username from which answer should be taken")
 user.send_keys(username+"@sret.edu.in")
 passwd.send_keys("myslate")
 driver.find_element_by_name("commit").click()
-driver.get(input("\n\n\n\n enter the answer source link full http :"))
+driver.get(input("\n\n\n\n Enter the answer source link including the https formating :\n\n\n\n"))
 driver.find_element_by_xpath("/html/body/header/div/div/div/div/ul/li[2]/a").click()
 source = driver.page_source
 source = Selector(text = source)
